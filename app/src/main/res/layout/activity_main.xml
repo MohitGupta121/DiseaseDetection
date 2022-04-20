@@ -77,7 +77,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:text="First import your image using camera"
                 android:justificationMode="inter_word"
+                android:textColor="@color/white"
                 android:lineSpacingMultiplier="0.9"
                 android:textSize="14sp"
                 android:visibility="gone"
@@ -86,7 +88,7 @@
             <ImageView
                 android:id="@+id/demoArrow"
                 android:layout_width="170dp"
-                android:layout_height="180dp"
+                android:layout_height="130dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="24dp"
                 android:rotation="-20"
