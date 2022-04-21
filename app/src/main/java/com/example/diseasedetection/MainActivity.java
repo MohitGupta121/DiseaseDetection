@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
-            String[] classes = {"", "", "", "", "", ""};
+            String[] classes = {"Pepper Bell Bacterial Spot", "Potato Early Blight", "Potato Late Blight", "Tomato Bacterial Spot", "Tomato Tomato YellowLeaf Curl Virus"};
             result.setText(classes[maxPos]);
             result.setOnClickListener(view -> {
                 startActivity(new Intent(Intent.ACTION_VIEW,
