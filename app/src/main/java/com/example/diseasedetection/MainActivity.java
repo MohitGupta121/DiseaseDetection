@@ -17,6 +17,15 @@ import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 
+import com.example.diseasedetection.ml.DiseaseDetection;
+
+import org.tensorflow.lite.DataType;
+import org.tensorflow.lite.support.tensorbuffer.TensorBuffer;
+
+import java.io.IOException;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView result, demoText, classified, clickHere;
@@ -73,7 +82,54 @@ public class MainActivity extends AppCompatActivity {
             result.setVisibility(View.VISIBLE);
 
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
+            classifyImage(image);
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void classifyImage(Bitmap image) {
+        try {
+            DiseaseDetection model = DiseaseDetection.newInstance(getApplicationContext());
+
+            //create input for reference
+            TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1,224,224,3}, DataType.FLOAT32);
+            ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);
+            byteBuffer.order(ByteOrder.nativeOrder());
+
+            // get 1D array of 224 * 224 pixels in image
+            int[] intValue = new int[imageSize * imageSize];
+            image.getPixels(intValue, 0, image.getWidth(), 0,0,image.getWidth(),image.getHeight());
+
+            // iterate over pixels and extract R, G, B values add to bytebuffer
+            int pixel = 0;
+            for (int i=0; i < imageSize; i++){
+                for (int j=0; j<imageSize; j++){
+                    int val = intValue[pixel++]; // RGB
+                    byteBuffer.putFloat(((val >> 16) & 0xFF) * (1.f / 255.f));
+                    byteBuffer.putFloat(((val >> 8) & 0xFF) * (1.f / 255.f));
+                    byteBuffer.putFloat((val & 0xFF) * (1.f / 255.f));
+                }
+            }
+
+            inputFeature0.loadBuffer(byteBuffer);
+
+            // run model interface and gets result
+            DiseaseDetection.Outputs outputs = model.process(inputFeature0);
+            TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
+
+            float[] confidence = outputFeature0.getFloatArray();
+
+            // find the index of the class with the biggest confidence
+            int maxPos = 0;
+            float maxConfidence = 0;
+            for (int i = 0; i < confidence.length; i++){
+                if (confidence[i] >maxConfidence){
+                    maxConfidence = confidence[i];
+                    maxPos = i;
+                }
+            }
+        }catch (IOException e){
+            // TODO Handle the exception
+        }
     }
 }
