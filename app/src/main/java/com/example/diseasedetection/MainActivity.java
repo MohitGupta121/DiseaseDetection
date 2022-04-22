@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             result.setText(classes[maxPos]);
             result.setOnClickListener(view -> {
                 startActivity(new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("https://www.google.com/search?q" + result.getText())));
+                        Uri.parse("https://www.google.com/search?q=" + result.getText())));
             });
 
             model.close();
