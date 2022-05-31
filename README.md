@@ -27,8 +27,12 @@
 
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-<!-- | ![Imgur](https://user-images.githubusercontent.com/76530270/170965228-515111bc-e02c-49cf-878c-eed593ec8a85.png) | ![image](https://user-images.githubusercontent.com/76530270/170965417-b0a9e49a-a7bd-461a-bccd-5c73904f79ae.png) | ![image](https://user-images.githubusercontent.com/76530270/170965814-60209f61-6323-41d4-9978-70c52f788879.png) |
-| ![image](https://user-images.githubusercontent.com/76530270/170965993-3942c71b-bd06-4307-acf5-56adbd4723b9.png) | ![image](https://user-images.githubusercontent.com/76530270/170966073-00ea3afa-f094-48a0-875c-264c83742c8c.png) | ![image](https://user-images.githubusercontent.com/76530270/170966221-b91ecc1f-0047-4c14-9b2f-fd92bb934b94.png) -->
+| ![diseasedetection](https://user-images.githubusercontent.com/76530270/171112927-78ed3aa4-2fdc-42e8-9be4-e842aee7733c.jpg) | ![Screenshot_2022-05-31-12-22-58-343_com example diseasedetection](https://user-images.githubusercontent.com/76530270/171113116-43214846-5c3e-4600-9341-07adfe5644d0.jpg) | ![Screenshot_2022-05-31-12-23-27-332_com android camera](https://user-images.githubusercontent.com/76530270/171113244-c10be32c-c473-49fa-9263-f5f3c613d407.jpg) |
+
+## 🎥 Demo Screen Recording
+
+https://user-images.githubusercontent.com/76530270/171112532-aa2b4ed7-b36e-4cf6-915a-91a8c216f781.mp4
+
 
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
