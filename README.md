@@ -27,7 +27,7 @@
 
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![diseasedetection](https://user-images.githubusercontent.com/76530270/171112927-78ed3aa4-2fdc-42e8-9be4-e842aee7733c.jpg) | ![Screenshot_2022-05-31-12-22-58-343_com example diseasedetection](https://user-images.githubusercontent.com/76530270/171113116-43214846-5c3e-4600-9341-07adfe5644d0.jpg) | ![Screenshot_2022-05-31-12-23-27-332_com android camera](https://user-images.githubusercontent.com/76530270/171113244-c10be32c-c473-49fa-9263-f5f3c613d407.jpg) |
+| ![diseasedetection](https://user-images.githubusercontent.com/76530270/171112927-78ed3aa4-2fdc-42e8-9be4-e842aee7733c.jpg) | ![Screenshot_2022-05-31-12-23-27-332_com android camera](https://user-images.githubusercontent.com/76530270/171113244-c10be32c-c473-49fa-9263-f5f3c613d407.jpg) | ![Screenshot_2022-05-31-12-22-58-343_com example diseasedetection](https://user-images.githubusercontent.com/76530270/171113116-43214846-5c3e-4600-9341-07adfe5644d0.jpg) | 
 
 ## 🎥 Demo Screen Recording
 
