@@ -47,7 +47,7 @@ https://user-images.githubusercontent.com/76530270/171112532-aa2b4ed7-b36e-4cf6-
 
 # Package Structure
     
-    dev.hellosagar.assigmenthub    # Root Package
+    com.example.diseasedetection    # Root Package
     .
     ├── data                # For data handling.
     │   └── repository      # Single source of data.   
