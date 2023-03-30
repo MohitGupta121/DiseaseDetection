@@ -18,7 +18,6 @@
 
 ## 🚀 Technology Used
 
-* Disease Detection built using Kotlin
 * Kaggle
 * Teachable Machine Model.
 * Tensorflow Lite
